@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title><span class="heading">How to isolate a part of text that might be formatted in a different direction from
+            other text outside it</span></title>
+</head>
+
+<body>
+    <p>
+        In the example below, usernames are shown along with the number of points in a contest.
+        If the bdi element is not supported in the browser, the username of the Arabic user would confuse the text (the
+        bidirectional algorithm would put the colon and the number "80" next to the word "User" rather than next to the
+        word "points").
+    </p>
+    <ul>
+        <li>User <bdi>hrefs</bdi>: 40 points</li>
+        <li>User <bdi>jdoe</bdi>: 60 points</li>
+        <li>User <bdi>ترحيب</bdi>:80 points</li>
+    </ul>
+    <p><b>Note:</b> The bdi element is currently supported only in Firefox and Chrome.</p>
+</body>
+
+</html>
